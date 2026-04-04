@@ -23,5 +23,7 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "OTP BOX"
-include(":app")
+if (file("app").exists()) {
+    include(":app")
+}
 include(":OTPPINBOX")
