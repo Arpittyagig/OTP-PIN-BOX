@@ -6,6 +6,15 @@ OTP PIN BOX
 
 How to Add this into your app/code
 
+	var otp by remember {
+            mutableStateOf("")
+        }
+        OtpPinBox(otp = otp,
+            onOtpChange = {
+                otp = it
+            },
+        )
+
 
 Step 1. Add the JitPack repository to your build gradle file
 
