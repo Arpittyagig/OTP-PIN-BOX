@@ -1,7 +1,7 @@
 package com.arp.otppinbox
 
-import android.app.Activity
-import android.widget.Toast
+//import android.app.Activity
+//import android.widget.Toast
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
@@ -23,7 +23,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.platform.LocalContext
+//import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
@@ -37,7 +37,7 @@ fun OtpPinBox(
     otp: String, otpLength: Int = 6, onOtpChange: (String) -> Unit
 ) {
 
-    val context = LocalContext as Activity
+//    val context = LocalContext as Activity
     val focusRequester = remember { FocusRequester() }
     val keyboardController = LocalSoftwareKeyboardController.current
 
@@ -50,7 +50,7 @@ fun OtpPinBox(
     BasicTextField(
         value = otp,
         onValueChange = { value ->
-            Toast.makeText(context, value, Toast.LENGTH_SHORT).show()
+//            Toast.makeText(context, value, Toast.LENGTH_SHORT).show()
             if (value.length <= otpLength && value.all { it.isDigit() }) {
                 onOtpChange(value)
             }
